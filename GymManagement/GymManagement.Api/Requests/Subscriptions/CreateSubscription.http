@@ -1,0 +1,11 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@host=http://localhost:5106
+@adminId=86150c46-0019-44ad-842b-08b10058acc2
+
+POST {{host}}/Subscriptions
+Content-Type: application/json
+
+{
+    "SubscriptionType": "Free",
+    "AdminId": "{{adminId}}"
+}
