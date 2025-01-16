@@ -1,5 +1,5 @@
 # For more info on HTTP files go to https://aka.ms/vs/httpfile
 @host=http://localhost:5106
-@subscriptionId=33E590D4-EF4F-467A-B3AB-8F535CEEC034	
+@subscriptionId=8de900b9-be4f-492a-a510-934cdd5733b6
 
 GET {{host}}/Subscriptions/{{subscriptionId}}

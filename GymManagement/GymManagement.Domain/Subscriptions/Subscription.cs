@@ -9,9 +9,27 @@ namespace GymManagement.Domain.Subscriptions
 {
     public class Subscription
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
 
-        // TODO: Check if Contracts project is being referenced here.
-        public string SubscriptionType { get; set; } = "Free";
+        public SubscriptionType SubscriptionType { get; private set; }
+
+        private readonly Guid _adminId;
+
+
+        public Subscription(
+            SubscriptionType subscriptionType,
+            Guid adminId,
+            Guid? id=null)
+        {
+            SubscriptionType = subscriptionType;
+            _adminId = adminId;
+            Id = id ?? Guid.NewGuid();
+        }
+
+        private Subscription()
+        {
+
+        }
+
     }
 }
